@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
     background-image: url(images/background-img2.jpg);
     background-size: cover;
@@ -6,7 +7,6 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-
 }
 
 * {
@@ -14,8 +14,71 @@ body {
     margin: 0;
     font-family: sans-serif;
     color: white;
+    box-sizing: border-box;
 }
 
+/* logo */
+.logo {
+	margin: 10px 0 5px 5px;
+}
+.logo-img {
+	cursor: pointer;
+}
+
+/* Side Menu */
+.side-bar {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+.side-bar .menu {
+    width: 100%;
+    margin-top: 80px;
+}
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+.side-bar .menu .item a {
+    color: rgb(36, 36,36);
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+} 
+.side-bar .menu .item a:hover {
+    background: #8621F8;
+    transition: 0.3s ease;
+}
+.side-bar .menu .item i {
+    margin-right: 15px;
+}
+.side-bar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+.side-bar .menu .item .sub-menu {
+    background: rgba(255,255,255,0.1);
+}
+.side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+}
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* Login Page */
 form {
     text-align: center;
     width: 400px;
@@ -109,7 +172,7 @@ form ion-icon {
 .checkbox label,.checkbox h4 {
     cursor: pointer;
 }
-form button {
+form .sub-button {
     position: relative;
     width: 80%;
     height: 30px;
@@ -122,7 +185,7 @@ form button {
     transition: .5s;
     overflow: hidden;
 }
-form button::before, form button::after {
+form .sub-button::before, form .sub-button::after {
     content: "";
     position: absolute;
     background-color: white;
@@ -133,16 +196,16 @@ form button::before, form button::after {
     transition: .5s;
     z-index: -1;
 }
-form button::before {
+form .sub-button::before {
     left: 0;
 }
-form button::after {
+form .sub-button::after {
     right: 0;
 }
-form button:hover::before,form button:hover::after {
+form .sub-button:hover::before,form .sub-button:hover::after {
     width: 60%;
 }
-form button:hover {
+form .sub-button:hover {
     color: black;
 }
 .Register-box {
@@ -151,4 +214,18 @@ form button:hover {
 }
 .Register-box {
     cursor: pointer;
+}
+
+.register {
+    text-align: center;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
 }

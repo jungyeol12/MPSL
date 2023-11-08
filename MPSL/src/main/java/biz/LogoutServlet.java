@@ -30,7 +30,7 @@ public class LogoutServlet extends HttpServlet {
 		
 		if(vo != null) {
 			session.removeAttribute("loginOK");
-			response.sendRedirect("/Library/index.jsp");
+			response.sendRedirect("/MPSL/index.jsp");
 		}
 	}
 }

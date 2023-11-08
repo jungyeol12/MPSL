@@ -1,7 +1,7 @@
 package vo;
 
 public class MemberVO {
-	private String memberId;
+	private String memberEmail;
 	private String memberPwd;
 	private String memberName;
 	
@@ -10,13 +10,13 @@ public class MemberVO {
 		super();
 	}
 	
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
 	}
 	
-	public String getMemberId()
+	public String getMemberEmail()
 	{
-		return memberId;
+		return memberEmail;
 	}
 	
 	public void setMemberPwd(String memberPwd)

@@ -36,7 +36,7 @@ public class QuitServlet extends HttpServlet {
 			out.println("<script> alert('사용자 정보가 없어 회원탈퇴를 진행할 수 없습니다.'); history.back() </script>");
 		} else {
 			MemberDAO dao = new MemberDAO();
-			result = dao.removeMember(user.getMemberId());
+			result = dao.removeMember(user.getMemberEmail());
 			String msg;
 			
 			if(result > 0) {
@@ -47,7 +47,8 @@ public class QuitServlet extends HttpServlet {
 			}
 			
 			session.setAttribute("quit", msg);
-			response.sendRedirect("/Library/member/quitResult.jsp");
+			out.println("<script> alert('회원탈퇴가 완료되었습니다.'); </script>");
+			response.sendRedirect("/MPSL/index.jsp");
 		}
 	}
 }

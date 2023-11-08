@@ -9,22 +9,22 @@ import common.JdbcUtil;
 import vo.MemberVO;
 
 public class MemberDAO {
-	public MemberVO getMemberData(String id) {
+	public MemberVO getMemberData(String email) {
 		MemberVO vo = null;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM lib_member WHERE member_id=?";
+		String sql = "SELECT * FROM member WHERE member_email=?";
 		
 		try {
 			conn = JdbcUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setString(1, email);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
 				vo = new MemberVO();
-				vo.setMemberId(rs.getString("member_id"));
+				vo.setMemberEmail(rs.getString("member_email"));
 				vo.setMemberPwd(rs.getString("member_pwd"));
 				vo.setMemberName(rs.getString("member_name"));
 			}
@@ -38,17 +38,17 @@ public class MemberDAO {
 		return vo;
 	}
 
-	public boolean existID(String id) {
+	public boolean existID(String email) {
 		boolean isExist = false;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM lib_member WHERE member_id=?";
+		String sql = "SELECT * FROM member WHERE member_email=?";
 		
 		try {
 			conn = JdbcUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setString(1, email);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -64,16 +64,16 @@ public class MemberDAO {
 		return isExist;
 	}
 	
-	public int removeMember(String id) {
+	public int removeMember(String email) {
 		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "DELETE FROM lib_member WHERE member_id=?";
+		String sql = "DELETE FROM member WHERE member_email=?";
 		
 		try {
 			conn = JdbcUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setString(1, email);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -86,12 +86,12 @@ public class MemberDAO {
 		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "INSERT INTO lib_member(member_id, member_pwd, member_name, member_addr, member_age) values(?,?,?,?,?)";
+		String sql = "INSERT INTO member(member_email, member_pwd, member_name, member_age) values(?,?,?,?)";
 		
 		try {
 			conn = JdbcUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, data.getMemberId());
+			pstmt.setString(1, data.getMemberEmail());
 			pstmt.setString(2, data.getMemberPwd());
 			pstmt.setString(3, data.getMemberName());
 			result = pstmt.executeUpdate();

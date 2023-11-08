@@ -31,16 +31,16 @@ public class RegisterServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		MemberDAO dao = new MemberDAO();
-		boolean isExist = dao.existID(request.getParameter("memberID"));
+		boolean isExist = dao.existID(request.getParameter("memberEmail"));
 		int result = 0;
 		
 		if(isExist) {
 			out.println("<script> alert('이미 존재하지 않는 ID 입니다. 다시 입력해주세요.'); history.back(); </script>");
 		} else {
 			MemberVO data = new MemberVO();
-			data.setMemberId(request.getParameter("memberId"));
+			data.setMemberEmail(request.getParameter("memberEmail"));
 			data.setMemberPwd(request.getParameter("memberPwd"));
-			data.setMemberName(request.getParameter("name"));
+			data.setMemberName(request.getParameter("memberName"));
 			
 			result = dao.insertMember(data);
 			if(result > 0) {
@@ -51,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
 				out.println("<script> alert('회원가입에 실패했습니다.'); </script>");
 			}
 			
-			response.sendRedirect("/Library/index.jsp");
+			response.sendRedirect("/MPSL/index.jsp");
 		}
 	}
 }
