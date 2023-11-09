@@ -94,6 +94,7 @@ public class MemberDAO {
 			pstmt.setString(1, data.getMemberEmail());
 			pstmt.setString(2, data.getMemberPwd());
 			pstmt.setString(3, data.getMemberName());
+			pstmt.setInt(4, data.getMemberAge());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

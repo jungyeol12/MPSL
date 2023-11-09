@@ -25,8 +25,7 @@
             <label for="input-email">Age</label>
             <ion-icon name="mail-outline"></ion-icon>
         </div>
-        <input class="sub-button" type="submit" value="가입">
-        <input type="reset" value="취소">
+        <input class="sub-button" type="submit" value="가입">	
     </form>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -24,7 +24,7 @@
 		</div>
 		<hr>
         <div class="menu">
-            <div class="item"> <a href="/MPSL/index.html"> <i class="fas fa-desktop"></i>Login</a></div>
+            <div class="item"> <a href="/MPSL/index.jsp"> <i class="fas fa-desktop"></i>Login</a></div>
             <div class="item">
                 <a class="sub-btn"> <i class="fas fa-table"></i>Server List <i class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">

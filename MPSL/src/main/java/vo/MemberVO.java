@@ -4,10 +4,20 @@ public class MemberVO {
 	private String memberEmail;
 	private String memberPwd;
 	private String memberName;
+	private Integer memberAge;
+	
 	
 	public MemberVO()
 	{
 		super();
+	}
+	
+	public Integer getMemberAge() {
+		return memberAge;
+	}
+
+	public void setMemberAge(Integer memberAge) {
+		this.memberAge = memberAge;
 	}
 	
 	public void setMemberEmail(String memberEmail) {

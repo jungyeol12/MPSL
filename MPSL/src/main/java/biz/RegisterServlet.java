@@ -35,12 +35,13 @@ public class RegisterServlet extends HttpServlet {
 		int result = 0;
 		
 		if(isExist) {
-			out.println("<script> alert('이미 존재하지 않는 ID 입니다. 다시 입력해주세요.'); history.back(); </script>");
+			out.println("<script> alert('이미 존재하지 않는 Email 입니다. 다시 입력해주세요.'); history.back(); </script>");
 		} else {
 			MemberVO data = new MemberVO();
 			data.setMemberEmail(request.getParameter("memberEmail"));
 			data.setMemberPwd(request.getParameter("memberPwd"));
 			data.setMemberName(request.getParameter("memberName"));
+			data.setMemberAge(request.getParameter("memberAge"));
 			
 			result = dao.insertMember(data);
 			if(result > 0) {
