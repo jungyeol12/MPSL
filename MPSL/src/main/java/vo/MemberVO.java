@@ -4,22 +4,14 @@ public class MemberVO {
 	private String memberEmail;
 	private String memberPwd;
 	private String memberName;
-	private Integer memberAge;
+	private int memberAge;
 	
 	
 	public MemberVO()
 	{
 		super();
 	}
-	
-	public Integer getMemberAge() {
-		return memberAge;
-	}
 
-	public void setMemberAge(Integer memberAge) {
-		this.memberAge = memberAge;
-	}
-	
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
 	}
@@ -48,4 +40,13 @@ public class MemberVO {
 	{
 		return memberName;
 	}
+	
+	public int getMemberAge() {
+		return memberAge;
+	}
+
+	public void setMemberAge(int memberAge) {
+		this.memberAge = memberAge;
+	}
+	
 }

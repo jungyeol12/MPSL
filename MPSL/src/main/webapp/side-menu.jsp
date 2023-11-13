@@ -51,8 +51,8 @@
             <div class="item">
                 <a class="sub-btn"> <i class="fas fa-table"></i>Server List <i class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="#" class="sub-item">PB 서버</a>
-                    <a href="#" class="sub-item">PE 서버</a>
+                    <a href="/MPSL/PBServerPage.jsp" class="sub-item">PB 서버</a>
+                    <a href="/MPSL/PEServerPage.jsp" class="sub-item">PE 서버</a>
                 </div>
             </div>
             <div class="item"> <a href="#"> <i class="fas fa-th"></i>Forms</a></div>

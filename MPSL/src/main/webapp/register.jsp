@@ -21,7 +21,7 @@
             <ion-icon name="mail-outline"></ion-icon>
         </div>
         <div class="input-box">
-            <input type="number" id="input-email" name="Age" required autocomplete="off">
+            <input type="number" id="input-email" name="age" required autocomplete="off">
             <label for="input-email">Age</label>
             <ion-icon name="mail-outline"></ion-icon>
         </div>
