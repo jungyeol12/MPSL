@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="side-menu.jsp" %>
+<%@ include file="../side-menu.jsp" %>
 
 	<form action="/MPSL/register" method="post" class="register">
         <h1>Register</h1>

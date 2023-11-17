@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(images/background-img2.jpg);
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* logo */
+.logo {
+	margin: 10px 0 5px 5px;
+}
+.logo-img {
+	cursor: pointer;
+}
+
+/* Side Menu */
+.side-bar {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+.side-bar .menu {
+    width: 100%;
+    margin-top: 80px;
+}
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+.side-bar .menu .item a {
+    color: rgb(36, 36,36);
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+} 
+.side-bar .menu .item a:hover {
+    background: #8621F8;
+    transition: 0.3s ease;
+}
+.side-bar .menu .item i {
+    margin-right: 15px;
+}
+.side-bar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+.side-bar .menu .item .sub-menu {
+    background: rgba(255,255,255,0.1);
+}
+.side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+}
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* Login Page */
+form {
+    text-align: center;
+    width: 400px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    color: white;
+}
+
+form h1 {
+    font-size: 40px;
+}
+
+form ion-icon {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    transform: translateY(-30px);
+}
+
+.input-box label {
+    transition: .3s;
+    user-select: none;
+    position: absolute;
+}
+
+.input-box input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 75%;
+    height: 25px;
+    z-index: 2;
+    font-size: 20px;
+    color: white;
+}
+
+.icon {
+    transform: rotate(-135deg);
+}
+
+.light {
+    display: none;
+    position: absolute;
+    width: 90%;
+    height: 25px;
+    left: 0;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 4px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.checkbox {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkbox div{
+    font-size: 17px;
+    display: flex;
+    align-items: start;
+}
+.checkbox input {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin: 1px 5px 0px 0px;
+}
+.checkbox label,.checkbox h4 {
+    cursor: pointer;
+}
+form .sub-button {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 15px 0px;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    background: none;
+    transition: .5s;
+    overflow: hidden;
+}
+form .sub-button::before, form .sub-button::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: 100%;
+    top: 0;
+    border-radius: 20px;
+    transition: .5s;
+    z-index: -1;
+}
+form .sub-button::before {
+    left: 0;
+}
+form .sub-button::after {
+    right: 0;
+}
+form .sub-button:hover::before,form .sub-button:hover::after {
+    width: 60%;
+}
+form .sub-button:hover {
+    color: black;
+}
+.Register-box {
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+#register {
+	color: white;
+}
+
+.register {
+    text-align: center;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+}
+
+.footer {
+	color: white;
+}
+
+.welcome {
+	color: white;
+}
