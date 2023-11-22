@@ -8,3 +8,19 @@ create table member(
 insert into member(member_email, member_pwd, member_name, member_age) values('bae2446bae@gmail.com', '1234', '배정열', 18);
 
 select * from member;
+
+create table serverList(
+	id number(2),
+	version varchar2(10),
+	address varchar2(30),
+	os varchar2(10),
+	member number(2)
+);
+
+CREATE SEQUENCE SEQ_TESTTABLE START WITH 1 INCREMENT BY 1 MAXVALUE 99999 CYCLE NOCACHE;
+
+insert into serverList(id, version, address, os, member) VALUES (SEQ_TESTTABLE.NEXTVAL, '1.12.2', '25.18.28.58:52539', 'PC', 1);
+
+select * from serverList;
+
+drop table serverList;

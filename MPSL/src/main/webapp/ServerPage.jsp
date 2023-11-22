@@ -5,6 +5,7 @@
 <main class="table">
         <section class="table__header">
             <h1>Server Lists</h1>
+            <a href="/MPSL/createServer.jsp"><button class="add"> + </button></a>
             <div class="input-group">
                 <input type="search" placeholder="Search Data...">
                 <img src="images/search.svg" alt="search">
